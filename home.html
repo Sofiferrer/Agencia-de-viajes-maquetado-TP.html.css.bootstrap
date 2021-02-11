@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html class="no-js" lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <title>Argentour Home</title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="style.css">
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kalam&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Merienda+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        body{
+    font-family: 'Roboto', sans-serif;
+    font-size: large;
+    background-color: #393e46;
+    margin: 1rem;            
+}
+.cabecera{
+    margin: auto;
+    background-image: url(img/luggage-1149289_1920.jpg);            
+    height: 30vh;
+    object-fit: cover;
+}
+.logo{
+    max-width: 15vw;
+    margin: auto;
+}
+h1{
+    color: beige;
+    font-family: 'Kalam', cursive;
+    font-size: 8vw;
+    margin: auto;
+    text-shadow: 3px 3px black;
+    filter: drop-shadow(10px 5px 5px #11111198)
+}       
+.navbar{
+    font-family: 'Amatic SC', cursive;
+    font-size: larger;
+}   
+li{
+    margin: 0 2rem;
+}        
+.slider{
+    margin: auto;
+    padding: 0 0 1rem 0;            
+    height: 70vh;
+    position: relative;
+}
+.buscador{
+    margin-bottom: 2rem;
+    padding: 1rem;
+    position: absolute;
+    top: 10px;
+    float: inherit;            
+}
+.carousel-caption{
+    font-family: 'Kalam', cursive;
+    font-size: 5vw;
+    width: 50%;
+    margin: auto;
+    padding: 0;
+    background-color: rgb(10, 10, 10, 0.4);
+    border-radius: 2rem;
+}
+.slider-cap {
+    margin: 0;
+    font-size: 1.5rem;
+}         
+.imagen{
+    height: 70vh;
+    object-fit: cover;
+}  
+.subtitulos{
+    text-align: center;
+}
+h3 {
+    display: inline-block;
+    position: relative;
+    color: beige;
+    font-size: 2rem;
+    filter: drop-shadow(10px 5px 5px #11111198);
+}     
+h3::after,h3::before{
+    content: "";
+    position: absolute;
+    width: 6rem;
+    height: 0.2rem;
+    background-color: beige;
+    top: 1rem;
+}
+h3::before{
+    left: -7rem;
+}
+h3::after{
+    right: -7rem;
+}
+h4{
+    font-size: larger;
+    text-align: center;
+}
+.home{
+    justify-content: center;
+}
+.card-destino {
+    
+    padding: 0;
+    cursor: pointer;
+    filter: drop-shadow(20px 15px 5px #11111198);
+    position: relative;
+}
+.etiqueta-card{
+    background-color: rgb(10, 10, 10, 0.4);
+    filter: drop-shadow(20px 15px 5px #11111198);
+    position: absolute;
+    font-size: medium;
+    right: 1rem;
+}
+.card-title {
+    font-size: 2rem;
+    background-color: rgba(245, 245, 220, 0.70);
+    border-radius: 1rem;
+    text-align: center;
+    color: rgb(17, 17, 16);
+}    
+.card-text{
+    align-content:center;
+    color: beige;
+    position: absolute;
+    bottom: 0rem;
+}    
+.card-img{
+    height: 40vh;
+    object-fit: cover;
+    filter: brightness(90%);            
+}
+.card-img-blog {
+    height: 40vh;
+    object-fit: cover;
+    filter: brightness(90%);
+    margin-bottom: 2rem;
+}
+.transicion {
+    transition: all 0.5s;
+}
+.card-destino:hover {
+    filter: grayscale(100%) drop-shadow(20px 15px 5px #11111198);
+    transform: scale(1.2);
+}
+.suscrib{
+    font-size: medium;
+    text-align: center;
+    background-color: rgba(253, 253, 253, 0.5);
+    padding: 1.5rem;
+    border-radius: 2rem;
+}
+.form-control{
+    font-size: x-small;
+}
+.card-blog{
+    padding: 1.5rem;
+    background-color:rgb(245, 245, 220, 0.9);
+    cursor: pointer;
+    filter: drop-shadow(20px 15px 5px #11111198);
+}
+.card-blog:hover{
+    filter: drop-shadow(20px 15px 5px #11111198);
+    transform: scale(0.9);
+}
+.footer{
+    background-color: rgb(10, 10, 10, 0.5);
+    color: beige;
+    border-radius: 1rem;
+    padding: 1rem;
+    text-align: center;
+    font-size: small;
+}
+.logo-footer{
+    height: 30vh;
+}
+.titulo-footer{
+    text-decoration: underline;
+}
+.img-footer {
+    height: 30vh;
+}
+/*css pag-prod*/
+.card-paquete {
+    width: 80%;
+    margin: auto;
+}
+.card-boton {
+    background-color:rgb(162, 192, 142);
+}
+.contenedor-publi {
+    margin: 2rem;
+}
+.publicidad {
+    border-radius: 1rem;
+    max-height: 50vh;
+}
+.card-publi{
+    background-color:rgb(245, 245, 220, 0.9);
+    height: 50vh;
+    cursor: pointer;
+    filter: drop-shadow(20px 15px 5px #11111198);
+}
+.card-title {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+.card-publi:hover{
+    filter: drop-shadow(20px 15px 5px #11111198);
+    transform: scale(0.9);
+}
+.card-img-publi {
+    height: 40vh;
+    object-fit: cover;
+    filter: brightness(90%);
+    margin-bottom: 2rem;
+}
+/*css pag-checkout*/
+.table{
+    background-color: beige;
+    border-radius: 0.5rem;
+    margin: 2rem auto;
+    text-align: center;
+}
+.boton-comprar{
+  background-color: beige;
+  border-radius: 1rem;
+  margin: 2rem;
+}
+/*css pag-gracias*/
+.gracias{
+    background-color: blanchedalmond;
+    border-radius: 2rem;
+    text-align: center;
+    color: black;
+    font-size: xx-large;
+  }
+
+@media (min-width: 280px) and (max-width: 990px) /*celulares*/ {
+    body{
+        justify-content: center;
+        }
+        .cabecera{
+            height: 15vh;
+        }
+        h1{
+            font-size: 45px;
+            text-align: end;
+        }
+        .logo{
+            max-width: 20vw;
+        }
+        .slider{
+            display: none;
+        }
+        .card-blog{
+            height: 40vh;
+            margin: 1rem;
+        }
+        .card-img-blog{
+            height: 20vh;
+        }
+
+}
+
+@media (min-width: 991px) and (max-width: 1099px) /*tablets*/{
+    body{
+        justify-content: center;
+    }
+    .cabecera{
+        height: 15vh;
+    }
+    .logo{
+        max-width: 20vw;
+    }
+    h1{
+        text-align: center;
+        font-size: 8rem;
+    }
+    .logo-footer{
+        width: 20rem;
+    }
+    .img-footer{
+        display: none;
+    }    
+}
+
+    </style>
+  </head>
+
+  <body>
+    <main class="container-fluid">        
+        <!--titulo/ clases: titulo--> 
+        <div class="row d-flex align-items-center cabecera">
+            <div class="col-2"><img src="img/logo_transparent.png" alt="logo" class="logo"></div>
+            <div class="col-10 titulo"><a href="home.html" target="_self"><h1>Argentour</h1></a></div>
+        </div>
+        <!--nav-->
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                <a class="navbar-brand" href="home.html">Argentour</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                  <ul class="navbar-nav ml-auto justify-content-between">
+                    <li class="nav-item active">
+                      <a class="nav-link" href="home.html" target="_self"><i class="fa fa-home" aria-hidden="true"></i>  Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#"><i class="fa fa-plane" aria-hidden="true"></i>  Vuelos</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#"><i class="fa fa-hotel" aria-hidden="true"></i>  Hoteles</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="prod.html" target="_self"><i class="fa fa-suitcase" aria-hidden="true"></i>  Paquetes</a>
+                    </li>
+                  </ul>
+                </div>
+            </nav>       
+        <!--slider-->
+        <div class="row slider">
+            <div id="carouselExampleCaptions" class="carousel slide col-12" data-ride="carousel">
+                <!--buscador-->
+                <div class="row justify-content-center">
+                    <ol class="carousel-indicators buscador col-8">                 
+                        <div data-target="#carouselExampleCaptions" class="buscador active">
+                          <form class="form-inline my-2 my-lg-0">
+                              <input class="form-control mr-sm-2" type="search" placeholder="A donde querés ir?" aria-label="Search">
+                              <button class="btn btn-dark my-2 my-sm-0" type="submit">Buscar</button>
+                          </form>
+                        </div>
+                    </ol> 
+                </div>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="img/03sliderbariloche.jpg" class="d-block w-100 imagen" alt="Bariloche">
+                    <div class="carousel-caption">
+                      <h2>Bariloche</h2>
+                      <p class="slider-cap d-none d-md-block">Paraíso natural.</p>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <img src="img/02sliderbsas.jpg" class="d-block w-100 imagen" alt="Buenos Aires">
+                    <div class="carousel-caption">
+                      <h2>Buenos Aires</h2>
+                      <p class="slider-cap d-none d-md-block">La ciudad que no duerme.</p>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <img src="img/02sliderglaciar.jpg" class="d-block w-100 imagen" alt="Glaciar">
+                    <div class="carousel-caption">
+                      <h2>Glaciar Perito Moreno</h2>
+                      <p class="slider-cap d-none d-md-block">Magestuosa inmensidad.</p>
+                    </div>
+                  </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </div>
+        <br>
+        <br>
+    <section class="home">
+            <!--cards natural-->
+            <div class="subtitulos"><h3>ARGENTINA NATURAL</h3></div>
+            <br>
+        <div class="row justify-content-around">
+            <div class="card card-destino bg-dark text-white col-md-5 col-lg-2 transicion">
+                <a href="prod.html" target="_self"><img src="img/04bariloche1.jpg" class="card-img" alt="bariloche">
+                    <div class="card-img-overlay">
+                      <h5 class="card-title">BARILOCHE</h5>
+                    </div>
+                    <div class="card-img-overlay row justify-content-end">
+                        <p class="etiqueta-card card-text col-8">6 días / 5 noches Desde $15.287 pax</p>
+                    </div>
+                </a>
+            </div>
+            <div class="card card-destino bg-dark text-white col-md-5 col-lg-2 transicion">
+                <img src="img/05glaciar1.jpg" class="card-img" alt="calafate">
+                <div class="card-img-overlay">
+                    <h5 class="card-title">CALAFATE</h5>
+                  </div>
+                  <div class="card-img-overlay row justify-content-end">
+                      <p class="etiqueta-card card-text col-8">6 días / 5 noches Desde $26.015 pax</p>
+                  </div>
+            </div>
+            <div class="card card-destino bg-dark text-white col-md-5 col-lg-2 transicion">
+                <img src="img/06norte1.jpg" class="card-img" alt="norte">
+                <div class="card-img-overlay">
+                    <h5 class="card-title">NORTE ARG</h5>
+                  </div>
+                  <div class="card-img-overlay row justify-content-end">
+                      <p class="etiqueta-card card-text col-8">6 días / 5 noches Desde $20.315 pax</p>
+                  </div>
+            </div>
+            <div class="card card-destino bg-dark text-white col-md-5 col-lg-2 transicion">
+                <img src="img/07cataratas.jpg" class="card-img" alt="cataratas">
+                <div class="card-img-overlay">
+                    <h5 class="card-title">CATARATAS</h5>
+                  </div>
+                  <div class="card-img-overlay row justify-content-end">
+                      <p class="etiqueta-card card-text col-8">6 días / 5 noches Desde $14.829 pax</p>
+                  </div>
+            </div>
+            <div class="card card-destino bg-dark text-white col-md-5 col-lg-2 transicion">
+                <img src="img/08ptomadryn.jpg" class="card-img" alt="puerto madryn">
+                <div class="card-img-overlay">
+                    <h5 class="card-title">PUERTO MADRYN</h5>
+                  </div>
+                  <div class="card-img-overlay row justify-content-end">
+                      <p class="etiqueta-card card-text col-8">5 días / 4 noches Desde $19.195 pax</p>
+                  </div>
+            </div>
+        </div>
+        <!--cards urbano-->
+            <br>
+            <br>
+            <div class="subtitulos"><h3>ARGENTINA URBANA</h3></div>
+            <br>
+            <div class="row justify-content-around">
+                <div class="card card-destino bg-dark text-white col-md-5 col-lg-2 transicion">
+                    <img src="img/09cordoba.jpg" class="card-img" alt="cordoba">
+                    <div class="card-img-overlay">
+                        <h5 class="card-title">CORODBA</h5>
+                      </div>
+                      <div class="card-img-overlay row justify-content-end">
+                          <p class="etiqueta-card card-text col-8">6 días / 5 noches Desde $12.329 pax</p>
+                      </div>
+                </div>
+                <div class="card card-destino bg-dark text-white col-md-5 col-lg-2 transicion">
+                    <img src="img/10mendoza.jpg" class="card-img" alt="mendoza">
+                    <div class="card-img-overlay">
+                        <h5 class="card-title">MENDOZA</h5>
+                      </div>
+                      <div class="card-img-overlay row justify-content-end">
+                          <p class="etiqueta-card card-text col-8">6 días / 5 noches Desde $17.977 pax</p>
+                      </div>
+                </div>
+                <div class="card card-destino bg-dark text-white col-md-5 col-lg-2 transicion">
+                    <img src="img/11buenosaires.jpg" class="card-img" alt="buenos aires">
+                    <div class="card-img-overlay">
+                        <h5 class="card-title">BUENOS AIRES</h5>
+                      </div>
+                      <div class="card-img-overlay row justify-content-end">
+                          <p class="etiqueta-card card-text col-8">5 días / 4 noches Desde $10.705 pax</p>
+                      </div>
+                </div>
+                <div class="card card-destino bg-dark text-white col-md-5 col-lg-2 transicion">
+                    <img src="img/12rosario.jpg" class="card-img" alt="rosario">
+                    <div class="card-img-overlay">
+                        <h5 class="card-title">ROSARIO</h5>
+                      </div>
+                      <div class="card-img-overlay row justify-content-end">
+                          <p class="etiqueta-card card-text col-8">6 días / 5 noches Desde $10.803 pax</p>
+                      </div>
+                </div>
+                <div class="card card-destino bg-dark text-white col-md-5 col-lg-2 transicion">
+                    <img src="img/13salta.jpg" class="card-img" alt="salta">
+                    <div class="card-img-overlay">
+                        <h5 class="card-title">SALTA</h5>
+                      </div>
+                      <div class="card-img-overlay row justify-content-end">
+                          <p class="etiqueta-card card-text col-8">6 días / 5 noches Desde $16.326 pax</p>
+                      </div>
+                </div>
+            </div>
+        <br>
+    </section>
+        <!--suscribirse-->
+        <div class="suscrib row container-fluid align-items-center justify-content-around">            
+                    <div class="col-sm-12 col-lg-4">
+                        <p>RECIBI LAS MEJORES PROMOCIONES EN TU MAIL</p> 
+                    </div>
+                    <div class="col-sm-6 col-lg-4">
+                        <input type="email" class="form-control" placeholder="Ingresa tu email">
+                    </div>
+                    <div class="col-sm-6 col-lg-4">
+                        <button class="btn btn-success my-2 my-sm-0" type="submit">SUSCRIBITE</button>
+                    </div>
+        </div>  
+            <br>
+            <br>   
+        <!--art blog-->
+        <div class="row justify-content-around">
+            <div class="card card-blog transicion col-lg-3 col-sm-10">
+                <h4>VIAJAR EN EPOCA DE COVID-19</h4>
+                <img src="img/14covid.jpg" class="card-img card-img-blog" alt="viajar en epoca covid">                
+                <p class="card-text"><medium class="text-dark">Te presentamos el protocolo 2020.</medium></p>
+            </div>
+            <div class="card card-blog transicion col-lg-3 col-sm-10">
+                <h4>DESTINOS IDEALES PARA PAREJAS</h4>
+                <img src="img/15pareja.jpg" class="card-img card-img-blog" alt="viajar en pareja">
+                <p class="card-text"><medium class="text-dark">La escapada perfecta para 2.</medium></p>
+            </div>
+            <div class="card card-blog transicion col-lg-3 col-sm-10">
+                <h4>5 DESTINOS OBLIGADOS EN ARGENTINA</h4>
+                <img src="img/16paisajefondo.jpg" class="card-img card-img-blog" alt="5 lugares argentina">
+                <p class="card-text"><medium class="text-dark">Lugares que no podes dejar de visitar.</medium></p>
+            </div>
+        </div>
+        <br>
+        <br>
+    </main>
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+      integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+  <footer>
+      <!--footer-->
+      <div class="container-fluid footer">
+          <div class="row justify-content-center align-items-center">
+            
+            <div class="col-md-6 col-lg-2">
+                <img src="img/logo_transparent1.png" alt="logo" class="logo-footer">
+            </div>
+
+            <div class="col-md-6 col-lg-3">
+                  <p class="titulo-footer">SEGUINOS</p>
+                    <p class="text-footer"><i class="fa fa-instagram" aria-hidden="true"></i><a href="https://www.instagram.com" target="blank"></i>    INSTAGRAM</a></p>
+                    <p class="text-footer"><i class="fa fa-facebook" aria-hidden="true"></i><a href="https://www.facebook.com" target="blank"></i>    FACEBOOK</a></p>
+                    <p class="text-footer"><i class="fa fa-twitter" aria-hidden="true"></i><a href="https://www.twitter.com" target="blank"></i>    TWITTER</a></p>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+                <p class="titulo-footer">PUNTOS DE VENTA</p>
+                <p class="text-footer">BUENOS AIRES</p>
+                <P class="text-footer">Florida 548 CABA</P>
+                <p class="text-footer">Tel: 011-41055894/41315782</p>
+                <br>
+                <p class="text-footer">LA PLATA</p>
+                <P class="text-footer">Calle 52 N° 364</P>
+                <p class="text-footer">Tel: 011-41055894/41315782</p>
+            </div>
+
+            <div class="col-md-6 col-lg-3 imagenes-footer justify-content-end">
+                  <img src="img/img-footer.jpg" alt="data fiscal" class="img-footer">           
+            </div>
+          </div>
+      </div>
+  </footer>
+</html>
